@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "Customer",
+    "description": "This represents the customer Model"
+  },
+  "options": {
+    "increments": true,
+    "configurable": false,
+    "privateAttributes": [
+      "__v",
+      "createdAt",
+      "updatedAt",
+      "_id"
+    ],
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true,
+      "maxLength": 100
+    },
+    "phoneNumber": {
+      "type": "string",
+      "maxLength": 11
+    },
+    "password": {
+      "type": "password",
+      "required": true
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "loyal": {
+      "type": "boolean",
+      "default": false
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "orders": {
+      "via": "customer",
+      "collection": "order"
+    },
+    "OTP": {
+      "type": "string"
+    },
+    "posts": {
+      "via": "customer",
+      "collection": "post"
+    },
+    "comments": {
+      "collection": "comment",
+      "via": "customer"
+    },
+    "cart": {
+      "via": "customer",
+      "model": "cart"
+    }
+  }
+}

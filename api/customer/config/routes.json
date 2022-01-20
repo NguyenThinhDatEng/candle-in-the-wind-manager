@@ -1,0 +1,108 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/customers/changePassword",
+      "handler": "customer.changePassword",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customers/verifyOTP",
+      "handler": "customer.verifyOTP",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customers/resetPassWord",
+      "handler": "customer.resetPassWord",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customers/signup",
+      "handler": "customer.signup",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customers/login",
+      "handler": "customer.login",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers",
+      "handler": "customer.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/getLoyal/:id",
+      "handler": "customer.getLoyal",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/getOrders/:id",
+      "handler": "customer.getOrders",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/count",
+      "handler": "customer.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/customers/:id",
+      "handler": "customer.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/customers",
+      "handler": "customer.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/customers/:id",
+      "handler": "customer.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/customers/:id",
+      "handler": "customer.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

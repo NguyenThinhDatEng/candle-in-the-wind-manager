@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "populateCreatorFields": true,
+    "privateAttributes": [
+      "__v",
+      "id",
+      "updated_by"
+    ]
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true,
+      "maxLength": 200
+    },
+    "customer": {
+      "via": "comments",
+      "model": "customer"
+    },
+    "post": {
+      "via": "comments",
+      "model": "post"
+    }
+  }
+}
